@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- Importar o Vue.js -->
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <header class="max-900">
+      <img src="https://img.icons8.com/fluency/48/000000/google-play-movies-and-tv.png" />
+      <h1>Filmes</h1>
+      <img class="hamburguer" v-on:click="toggleMenu()"
+        src="https://img.icons8.com/material-rounded/40/000000/menu--v1.png" />
+    </header>
+
+    <div class="container max-900">
+
+      <div class="movie" v-for="m of movies">
+        <div class="title">{{m.Title}}</div>
+        <div> {{m.Year}} </div>
+        <div>
